@@ -1,0 +1,6 @@
+{
+  "name": "Telegram Bot Sync",
+  "description": "A Java-only Android app that connects with a Telegram bot, receives and displays client messages locally, supports image tap-to-save and long-press-to-delete, text tap-to-copy, and direct bot replies.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

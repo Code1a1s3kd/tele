@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingVertical="4dp"
+    android:paddingHorizontal="8dp">
+
+    <!-- Sender Avatar or Initial Placeholder (Optional, let's keep it simple and clean) -->
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_alignParentStart="true">
+
+        <!-- Sender name -->
+        <TextView
+            android:id="@+id/sender_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="User"
+            android:textStyle="bold"
+            android:textSize="12sp"
+            android:textColor="@color/primary"
+            android:layout_marginStart="8dp"
+            android:layout_marginBottom="2dp" />
+
+        <!-- Bubble Card -->
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/bubble_card"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:cardCornerRadius="16dp"
+            app:cardElevation="1dp"
+            app:strokeWidth="0dp"
+            app:cardBackgroundColor="@color/inbound_bubble">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="10dp"
+                android:layout_gravity="start">
+
+                <!-- Image attachment (ImageView) -->
+                <ImageView
+                    android:id="@+id/message_image"
+                    android:layout_width="240dp"
+                    android:layout_height="180dp"
+                    android:scaleType="centerCrop"
+                    android:visibility="gone"
+                    android:layout_marginBottom="6dp"
+                    android:contentDescription="Image Message" />
+
+                <!-- Message text (TextView) -->
+                <TextView
+                    android:id="@+id/message_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Hello from Telegram"
+                    android:textSize="15sp"
+                    android:textColor="@color/text_primary"
+                    android:maxWidth="240dp" />
+
+                <!-- Message timestamp (TextView) -->
+                <TextView
+                    android:id="@+id/message_time"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="10:30 AM"
+                    android:textSize="10sp"
+                    android:textColor="@color/text_secondary"
+                    android:layout_gravity="end"
+                    android:layout_marginTop="4dp" />
+
+            </LinearLayout>
+
+        </com.google.android.material.card.MaterialCardView>
+
+    </LinearLayout>
+
+</RelativeLayout>
